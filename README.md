@@ -18,7 +18,7 @@ limitations under the License.
 
 -->
 
-# Reviver
+# reviveComplex128
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
@@ -57,10 +57,10 @@ The [branches.md][branches-url] file summarizes the available branches and displ
 ## Usage
 
 ```javascript
-var reviver = require( '@stdlib/complex-reviver-float64' );
+var reviveComplex128 = require( '@stdlib/complex-reviver-float64' );
 ```
 
-#### reviver( key, value )
+#### reviveComplex128( key, value )
 
 Revives a JSON-serialized 128-bit [complex number][@stdlib/complex/float64].
 
@@ -69,7 +69,7 @@ var parseJSON = require( '@stdlib/utils-parse-json' );
 
 var str = '{"type":"Complex128","re":5,"im":3}';
 
-var z = parseJSON( str, reviver );
+var z = parseJSON( str, reviveComplex128 );
 // returns <Complex128>
 ```
 
@@ -98,13 +98,13 @@ For details on the JSON serialization format, see [`Complex128`][@stdlib/complex
 ```javascript
 var Complex128 = require( '@stdlib/complex-float64' );
 var parseJSON = require( '@stdlib/utils-parse-json' );
-var reviver = require( '@stdlib/complex-reviver-float64' );
+var reviveComplex128 = require( '@stdlib/complex-reviver-float64' );
 
 var z = new Complex128( 5.0, 3.0 );
 var str = JSON.stringify( z );
 // returns '{"type":"Complex128","re":5,"im":3}'
 
-var w = parseJSON( str, reviver );
+var w = parseJSON( str, reviveComplex128 );
 if ( w instanceof Error ) {
     throw w;
 }
@@ -215,9 +215,9 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/complex-reviver-float64/main/LICENSE
 
-<!-- <related-links> -->
-
 [@stdlib/complex/float64]: https://github.com/stdlib-js/complex-float64
+
+<!-- <related-links> -->
 
 [@stdlib/complex/reviver-float32]: https://github.com/stdlib-js/complex-reviver-float32
 
