@@ -1,3 +1,11 @@
+## Attention
+
+:warning: **Please use [@stdlib/complex-float64-reviver](https://github.com/stdlib-js/complex-float64-reviver) instead.** :warning:
+
+<br>
+
+* * *
+
 <!--
 
 @license Apache-2.0
